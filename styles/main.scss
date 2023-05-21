@@ -95,6 +95,17 @@ article {
   gap: 1rem;
   text-align: center;
   animation: fade 1.5s linear;
+  transition: 1s all;
+  cursor: pointer;
+  :hover {
+    background-color: white;
+    h2 {
+      color: black;
+    }
+    p {
+      color: black;
+    }
+  }
 }
 
 @keyframes fade {
@@ -110,6 +121,7 @@ article {
   border: 1px solid #fff;
   padding: var(--primary-padding);
   border-radius: var(--border-radius);
+  box-shadow: 12px 12px 12px black;
   img {
     width: 300px;
     height: 300px;
@@ -118,6 +130,10 @@ article {
   .btn {
     margin-top: 0.5em;
   }
+}
+
+.btn:hover {
+  background-color: black;
 }
 
 @media screen and (min-width: 768px) {
