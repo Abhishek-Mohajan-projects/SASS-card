@@ -1,0 +1,29 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--primary-padding);
+  background-color: peru;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 999;
+}
+
+@media screen and (max-width: 921px) {
+  header {
+    display: block;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 567px) {
+  header {
+    padding: 0.5rem;
+  }
+  nav ul {
+    font-size: 12px;
+  }
+}

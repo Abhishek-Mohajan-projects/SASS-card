@@ -1,0 +1,132 @@
+@forward "./../base/reset";
+
+// header -->
+@use "./../utilities/index";
+
+:root {
+  --soft-color: #34495e;
+  --primary-color: #1abc9c;
+  --secondary-color: #2980b9;
+  --primary-fontSize: 12px;
+  --border: 1px solid white;
+  --primary-padding: 1.2rem;
+  --secondary-padding: 0.6rem;
+  --primary-margin: 1em;
+  --primary-fontColor: #2d3436;
+  --primary-button: purple;
+  --border-radius: 0.5em;
+  --primary-font: verdana;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 9rem;
+  overflow-x: hidden;
+  font-size: 90.5%;
+  font-family: consolas;
+}
+
+html::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #fff;
+}
+
+body {
+  background-color: var(--soft-color);
+  overflow-x: hidden;
+}
+
+// navbar scss-->
+
+nav {
+  margin: var(--primary-margin);
+
+  li {
+    display: inline-block;
+    margin: var(--primary-margin);
+    color: white;
+
+    a {
+      color: orange;
+      transition: 0.3s all;
+    }
+    a:hover {
+      color: whitesmoke;
+    }
+  }
+}
+
+button {
+  display: inline;
+  padding: var(--secondary-padding);
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  transition: 0.3s all;
+  border: none;
+}
+
+button:hover {
+  background-color: purple;
+  color: white;
+}
+
+main {
+  overflow: hidden;
+  margin-top: 10rem;
+}
+
+article {
+  padding: var(--primary-padding);
+  max-width: 1280px;
+  margin: auto;
+}
+
+.card-container {
+  margin: auto;
+  display: grid;
+  gap: 1rem;
+  text-align: center;
+  animation: fade 1.5s linear;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.card {
+  border: 1px solid #fff;
+  padding: var(--primary-padding);
+  border-radius: var(--border-radius);
+  img {
+    width: 300px;
+    height: 300px;
+    object-fit: scale-down;
+  }
+  .btn {
+    margin-top: 0.5em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card-container {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .card-container {
+    grid-template-columns: auto auto auto;
+  }
+}
